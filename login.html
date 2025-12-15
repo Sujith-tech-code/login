@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+    <h4>Sign Up</h4>
+        <form  >
+            <label for="siusername">Create Username:</label>
+            <input type="text" id="siusername"  required><br><br>
+            <label for="sipassword">Create Password:</label>
+            <input type="password" id="sipassword" required><br><br>
+            <label for="sicpassword">Confirm Password:</label>
+            <input type="password" id="sicpassword" required><br><br>
+             <button type="submit" id="signupbutton" >Sign up</button>
+        </form>
+    </div>
+    <div class="container">
+           <h4>Login</h4>
+        <form >
+            <label for="lusername" >Username</label>
+            <input type="text" id="lusername" required><br><br>
+            <label for="lpassword" >Password</label>
+            <input type="password"  id="lpassword" required><br><br>
+            <button type="submit" id="loginbutton" >Login</button>
+        </form>
+    </div>
+    <div class="textbox">
+       <h6> TextBox</h6>
+       <textarea id="textbox"  > </textarea><br>
+       <button id="textsubmit">save</button>
+    </div>
+    <!-- 1st attempt to test the saved text area content
+    <button id="test" >test</button> -->
+    <script src="login.js"></script>
+</body>
+</html>
