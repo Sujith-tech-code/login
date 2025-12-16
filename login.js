@@ -51,6 +51,7 @@ TextSubmitButton.addEventListener("click",(event)=>{
 //Login Button
 LoginButton.addEventListener("click",(event)=>{
 event.preventDefault();
+TextPath=true;
   for(let i=1;i<=NoofUsers;i++){
     if(LUserName.value==Users[i].UserName){
       PresentUserIndex=i;
