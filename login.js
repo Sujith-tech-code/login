@@ -5,39 +5,51 @@ let PresentUserIndex;
 let SignUpButton=document.querySelector("#signupbutton");
 let LoginButton=document.querySelector("#loginbutton");
 let LUserName=document.querySelector("#lusername");
+let LPassword=document.querySelector("lpassword");
 let TestBox=document.querySelector("#textbox");
 let TextSubmitButton=document.querySelector("#textsubmit");
-let TextPath;
+let TextPath;// true if text box is edited after login else false with signup
 
 // SignUP button
 let FirstSignUp=true;
 SignUpButton.addEventListener("click",(event)=>{
  event.preventDefault();
- 
  TextPath=false;
 if(FirstSignUp==true){
-  NoofUsers+=1;
+ if(document.querySelector("#sipassword").value==document.querySelector("#sicpassword").value){
+   NoofUsers+=1;
    Users[NoofUsers] = {
    UserName: document.querySelector("#siusername").value,
    Password: document.querySelector("#sipassword").value,
- };
+ } 
  FirstSignUp=false;
+ }
+ else{
+  alert("Passwords don't match");
+ }
 }
 else{
   for(let i=1;i<=NoofUsers;i++){
     if(Users[i].UserName!=document.querySelector("#siusername").value){
-      NoofUsers+=1;  
-      Users[NoofUsers] = {
+      
+         if(document.querySelector("#sipassword").value==document.querySelector("#sicpassword").value){
+   NoofUsers+=1;
+   Users[NoofUsers] = {
    UserName: document.querySelector("#siusername").value,
    Password: document.querySelector("#sipassword").value,
- };         break; 
+ }
+      }
+      else{
+        alert("passwords don't match");
+      }
+      break; 
     }
     else{
-      alert(`Username ${document.querySelector("#siusername").value} already exists`);
+      alert(`Username ${document.querySelector("#siusername").value} already exists`);}
     }
   }
 }
-});
+);
 
 // text box area
 TextSubmitButton.addEventListener("click",(event)=>{
@@ -57,6 +69,9 @@ TextPath=true;
       PresentUserIndex=i;
       TestBox.value=Users[i].TextAreaContent;
       break;
+    }
+    else{
+      alert(`Username ${LUserName.value} doesn't exist`);
     }
   }
 });
