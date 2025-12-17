@@ -5,7 +5,7 @@ let PresentUserIndex;
 let SignUpButton=document.querySelector("#signupbutton");
 let LoginButton=document.querySelector("#loginbutton");
 let LUserName=document.querySelector("#lusername");
-let LPassword=document.querySelector("lpassword");
+let LPassword=document.querySelector("#lpassword");
 let TestBox=document.querySelector("#textbox");
 let TextSubmitButton=document.querySelector("#textsubmit");
 let TextPath;// true if text box is edited after login else false with signup
@@ -67,8 +67,12 @@ TextPath=true;
   for(let i=1;i<=NoofUsers;i++){
     if(LUserName.value==Users[i].UserName){
       PresentUserIndex=i;
-      TestBox.value=Users[i].TextAreaContent;
-      break;
+       if(LPassword.value==Users[PresentUserIndex].Password){
+            TestBox.value=Users[i].TextAreaContent;
+            break;
+       }else{
+        alert("Incorrect  Password");
+       }
     }
     else{
       alert(`Username ${LUserName.value} doesn't exist`);
