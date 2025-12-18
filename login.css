@@ -1,4 +1,32 @@
+body{
+    margin:0;
+}
 #textbox{
     height: 100px;
     width:250px;
 }
+#container1{
+    margin-left: 600px;
+}
+#container2{
+    margin-left: 600px;
+    visibility: hidden;
+}
+#textboxcontainer{
+    margin-left: 600px;
+    z-index: 1;
+    visibility: hidden;
+}
+.container{
+    position: absolute;
+    margin-top: 200px;
+    
+}
+#hidden{
+    margin-left: 600px;
+    visibility: hidden;
+}
+#hidden{
+    margin-left: 600px;
+}
+
