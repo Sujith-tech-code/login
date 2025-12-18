@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="container">
+    
+    <div class="container" id="container1 ">
     <h4>Sign Up</h4>
-        <form  >
+        <form id="SignUpForm" >
             <label for="siusername">Create Username:</label>
             <input type="text" id="siusername"  required><br><br>
             <label for="sipassword">Create Password:</label>
@@ -19,9 +20,9 @@
              <button type="submit" id="signupbutton" >Sign up</button>
         </form>
     </div>
-    <div class="container">
+    <div class="container" id="container2 ">
            <h4>Login</h4>
-        <form >
+        <form id="LoginForm"  >
             <label for="lusername" >Username</label>
             <input type="text" id="lusername" required><br><br>
             <label for="lpassword" >Password</label>
@@ -29,13 +30,12 @@
             <button type="submit" id="loginbutton" >Login</button>
         </form>
     </div>
-    <div class="textbox">
+    <div class="container" id="textboxcontainer " >
        <h6> TextBox</h6>
        <textarea id="textbox"  > </textarea><br>
        <button id="textsubmit">save</button>
     </div>
-    <!-- 1st attempt to test the saved text area content
-    <button id="test" >test</button> -->
+    
     <script src="login.js"></script>
 </body>
 </html>
