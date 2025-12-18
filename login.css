@@ -7,26 +7,45 @@ body{
 }
 #container1{
     margin-left: 600px;
+    position: absolute;
+    display: block;
+     
 }
 #container2{
     margin-left: 600px;
-    visibility: hidden;
+    display: none;
+    position: absolute;
 }
 #textboxcontainer{
     margin-left: 600px;
-    z-index: 1;
-    visibility: hidden;
+   display: none;
+    position: absolute;
 }
 .container{
     position: absolute;
     margin-top: 200px;
     
 }
-#hidden{
+
+.navbar{
     margin-left: 600px;
-    visibility: hidden;
+    margin-top: 170px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-color: greenyellow;
+    height: 50px;
+    padding-left: 55px;
+    padding-right: 55px;
 }
-#hidden{
-    margin-left: 600px;
+#signsection{
+    margin-right: 100px;
 }
+.navbtn{
+ all: unset; /* Removes all default browser styling */
+cursor: pointer;
+border: none;
+background-color: greenyellow;
+}
+
 
